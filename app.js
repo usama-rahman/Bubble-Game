@@ -8,9 +8,7 @@ function makeBubble(){
    document.querySelector(".panel-bottom").innerHTML = clutter;
 }
 
-
-
-function runTime (){
+function runTime(){
    let timer = 60;
    let timeInterval = setInterval(function(){
       if(timer>0){
@@ -22,6 +20,19 @@ function runTime (){
    },1000)
 }
 
+function getNewHit(){
+   let randomHit = Math.floor(Math.random() * 10);
+   document.querySelector('#hit').textContent = randomHit;
+}
+
+function increaseScore (){
+   let score = 2;
+   score += 10;
+   document.querySelector('#score').textContent = score;
+}
+
+increaseScore();
+getNewHit();
 runTime();
 makeBubble();
 
